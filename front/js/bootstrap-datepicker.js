@@ -250,8 +250,10 @@
 					this.element.find('input').val(formatted);
 				}
 				this.element.data('date', formatted);
+
 			} else {
 				this.element.val(formatted);
+				this.element.addClass("active");
 			}
 		},
 

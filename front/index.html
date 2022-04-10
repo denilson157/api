@@ -22,19 +22,18 @@
     <script type="text/javascript" src="script.js"></script>    
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>    
-
     <!---->
     <script type="text/javascript" src="script.js"></script>    
 
     <title>Pipous</title>
 </head>
-<body class="bg-">
+<body>
     <head>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container">
               <a class="navbar-brand" href="#">
                 <img src="https://via.placeholder.com/20" class="me-2" height="20" alt="MDB Logo" loading="lazy"/>
-                <small>Pipous</small>
+                <h1 class="fs-5 fw-bold mb-0">Pipous</h1>
               </a>
               <ul class="navbar-nav m-auto mb-2 mb-lg-0">
                 <li class="nav-item">
@@ -79,21 +78,21 @@
                             <button type="button" onclick="insertPipou();" class="btn btn-primary w-100">Insert</button>
                         </div>
                         <div class="col-6">
-                            <button type="button" class="btn btn-danger w-100">Cancel</button>
+                            <button type="button" onclick="insertCancel();" class="btn btn-danger w-100">Cancel</button>
                         </div>
                     </div>
                 </div>
               </div>
         </div>
 
-        <div id="pnlUpdate" class="mb-4">
+        <div id="pnlUpdate" class="mb-4 d-none">
             <div class="card py-2">
                 <div class="card-body">
                     <h2 class="card-title h4">Update Pipous</h2>
                     <div class="row py-2">
                         <div class="col-12">
                             <div class="form-outline">
-                                <input type="text" id="updateName" name="updateName" class="form-control form-white" />
+                                <input type="text" id="updateName" name="updateName" class="form-control form-white active" />
                                 <label class="form-label" for="updateName">Name</label>
                             </div>
                         </div>
@@ -101,7 +100,7 @@
                     <div class="row py-2">
                         <div class="col-12">
                             <div class="form-outline">
-                                <input type="datetime" id="updateBirthDate" name="updateBirthDate" class="datepicker form-control" data-date-format="mm/dd/yyyy"/>
+                                <input type="datetime" id="updateBirthDate" name="updateBirthDate" class="datepicker form-control active" data-date-format="mm/dd/yyyy"/>
                                 <label class="form-label" for="updateBirthDate">Birth Date</label>
                             </div>
                         </div>
@@ -109,14 +108,14 @@
                     <div class="row py-2">
                         <div class="col-12">
                             <div class="form-outline">
-                                <input type="number" id="updateSalary" name="updateSalary" class="form-control" />
+                                <input type="number" id="updateSalary" name="updateSalary" class="form-control active" />
                                 <label class="form-label" for="updateSalary">Salary</label>
                             </div>
                         </div>
                     </div>
                     <div class="row py-2">
                         <div class="col-6">
-                            <button type="button" class="btn btn-primary w-100">Update</button>
+                            <button id="btnUpdatePipou" type="button" class="btn btn-primary w-100">Update</button>
                         </div>
                         <div class="col-6">
                             <button type="button" onclick="openUpdate()" class="btn btn-danger w-100">Cancel</button>
@@ -144,16 +143,6 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tabelaPipous">
-                                    <tr id="1">
-                                        <th>1</th>
-                                        <td scope="row">Denilson Pereira</td>
-                                        <td>27-12-1998</td>
-                                        <td>R$ 50000,00</td>
-                                        <td>
-                                          <a href="#" class="text-light material-icons">edit</a>
-                                          <a href="#" class="text-light material-icons">delete</a>
-                                        </td>
-                                    </tr>
                                 </tbody>
                             </table>
                         </div>
